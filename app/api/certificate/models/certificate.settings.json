@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "certificates",
+  "info": {
+    "name": "Certificate"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "certifiedAt": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+query Certificate($id: ID!) {
+  certificates(where: { id: $id }) {
+    id
+    firstName
+    lastName
+    certifiedAt
+  }
+}

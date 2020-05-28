@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapters",
+  "info": {
+    "name": "Chapter"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "lessons": {
+      "via": "chapter",
+      "collection": "lesson"
+    },
+    "quizzes": {
+      "via": "chapter",
+      "collection": "quiz"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_quiz_running_exams",
+  "info": {
+    "name": "currentExam",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "startedAt": {
+      "type": "biginteger"
+    },
+    "exam": {
+      "model": "quiz"
+    },
+    "currentQuestionIndex": {
+      "type": "integer"
+    },
+    "currentPoints": {
+      "type": "integer"
+    }
+  }
+}

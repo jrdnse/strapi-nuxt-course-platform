@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_quiz_answers",
+  "info": {
+    "name": "Answers",
+    "icon": "spell-check"
+  },
+  "options": {},
+  "attributes": {
+    "answer": {
+      "type": "string"
+    },
+    "correct": {
+      "type": "boolean"
+    }
+  }
+}

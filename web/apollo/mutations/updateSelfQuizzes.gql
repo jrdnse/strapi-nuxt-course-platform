@@ -1,0 +1,7 @@
+mutation updateSelfQuizzes($quizzes: [ID]!) {
+  updateMyself(input: { data: { completedQuizzes: $quizzes } }) {
+    user {
+      id
+    }
+  }
+}

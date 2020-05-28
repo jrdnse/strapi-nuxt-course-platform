@@ -1,0 +1,32 @@
+query Lesson($slug: String!) {
+  lessons(where: { slug: $slug }) {
+    id
+    title
+    video {
+      url
+    }
+    videoSubtitles {
+      url
+    }
+    poster {
+      url
+    }
+    overview
+    teacher {
+      fullName
+      company
+      linkedInURL
+      biography
+      profilePicture {
+        url
+        alternativeText
+      }
+    }
+    slides {
+      url
+    }
+    transcript {
+      url
+    }
+  }
+}

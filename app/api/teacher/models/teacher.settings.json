@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teachers",
+  "info": {
+    "name": "Teacher"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string"
+    },
+    "linkedInURL": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "fullName"
+    },
+    "profilePicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "lessons": {
+      "via": "teacher",
+      "collection": "lesson"
+    },
+    "biography": {
+      "type": "text"
+    }
+  }
+}

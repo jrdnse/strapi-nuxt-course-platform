@@ -1,0 +1,14 @@
+mutation startExam($examId: ID!) {
+  startExam(examId: $examId) {
+    user {
+      currentExam {
+        id
+        startedAt
+        exam {
+          id
+          title
+        }
+      }
+    }
+  }
+}

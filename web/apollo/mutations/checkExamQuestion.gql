@@ -1,0 +1,10 @@
+mutation checkExamQuestion($answers: [ID!]!) {
+  checkExamQuestion(answers: $answers) {
+    user {
+      currentExam {
+        currentPoints
+        currentQuestionIndex
+      }
+    }
+  }
+}

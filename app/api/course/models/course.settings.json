@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "duration": {
+      "type": "text",
+      "required": true
+    },
+    "chapters": {
+      "collection": "chapter"
+    },
+    "users": {
+      "via": "completedCourses",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

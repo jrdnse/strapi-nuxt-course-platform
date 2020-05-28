@@ -1,0 +1,8 @@
+mutation submitExam($examId: ID!) {
+  submitExam(examId: $examId) {
+    score
+    passedOnTime
+    passed
+    certificate
+  }
+}

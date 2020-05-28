@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "name": "Question"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "quiz.answers"
+    },
+    "quiz": {
+      "model": "quiz",
+      "via": "questions"
+    },
+    "successText": {
+      "type": "text"
+    },
+    "failText": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "radio",
+        "multiple"
+      ]
+    },
+    "points": {
+      "type": "integer"
+    }
+  }
+}

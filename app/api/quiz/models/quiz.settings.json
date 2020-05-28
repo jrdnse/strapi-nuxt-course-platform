@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizzes",
+  "info": {
+    "name": "Quiz"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "questions": {
+      "via": "quiz",
+      "collection": "question"
+    },
+    "title": {
+      "type": "string"
+    },
+    "exam": {
+      "type": "boolean"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "chapter": {
+      "model": "chapter",
+      "via": "quizzes"
+    },
+    "examTimeLimit": {
+      "type": "integer"
+    },
+    "pointsToPassExam": {
+      "type": "integer"
+    }
+  }
+}

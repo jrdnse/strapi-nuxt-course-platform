@@ -1,0 +1,21 @@
+query Quiz($slug: String) {
+  quizzes(where: { slug: $slug }) {
+    id
+    title
+    exam
+    examTimeLimit
+    pointsToPassExam
+    questions {
+      id
+      question
+      successText
+      failText
+      type
+      answers {
+        id
+        answer
+        correct
+      }
+    }
+  }
+}
